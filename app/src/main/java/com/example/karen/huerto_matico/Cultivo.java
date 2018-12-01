@@ -9,7 +9,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class Cultivo extends AppCompatActivity {
-    ArrayList<Planta> cultivo= new ArrayList<Planta>();
+    //ArrayList<Planta> cultivo= new ArrayList<Planta>();
     Button regresar;
     Button editar;
     @Override

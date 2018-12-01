@@ -25,8 +25,10 @@ public class AgregarPlanta extends AppCompatActivity {
             }
         });
 
-        Intent datosP=new Intent(AgregarPlanta.this, Planta.class);
+        agregarPlanta();
 
+    }
 
+    private void agregarPlanta() {
     }
 }

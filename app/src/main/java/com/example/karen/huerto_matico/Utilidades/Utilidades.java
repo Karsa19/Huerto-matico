@@ -15,10 +15,11 @@ public class Utilidades {
             +CAMPO_TemperaturaCul+ "INTEGER NOT NULL,"
             +CAMPO_TiempoLuzCul+ "INTEGER)";
 
+
     //Tabla Planta
     public static final String TABLA_Planta="Planta";
     public static final String CAMPO_idP="id_P";
-    public static final String CAMPO_idCultivo="id_P";
+    public static final String CAMPO_idCultivo="id_C";
     public static final String CAMPO_Nombre="nombre";
     public static final String CAMPO_Tipo="tipo";
     public static final String CAMPO_Humedad="humedad";
@@ -26,8 +27,8 @@ public class Utilidades {
     public static final String CAMPO_TiempoLuz="tiempoLuz";
 
     public static final String crear_tabla_planta= "CREATE TABLE" + TABLA_Planta +
-            "("+ CAMPO_idP + "INTEGER PRIMARY KEY AUTOINCREMENT,"+
-            "FOREIGN KEY ("+ CAMPO_idCultivo +") REFERENCES "+ TABLA_Cultivo+ "("+CAMPO_idC+"),"
+            "("+ CAMPO_idP + "INTEGER PRIMARY KEY AUTOINCREMENT,"/*+
+            "FOREIGN KEY ("+ CAMPO_idCultivo +") REFERENCES "+ TABLA_Cultivo+ "("+CAMPO_idC+"),"*/
             +CAMPO_Nombre + "TEXT NOT NULL,"
             + CAMPO_Tipo + "TEXT NOT NULL,"
             +CAMPO_Temperatura+ "INTEGER,"

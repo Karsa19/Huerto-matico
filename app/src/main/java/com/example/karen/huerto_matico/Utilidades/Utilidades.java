@@ -3,7 +3,7 @@ package com.example.karen.huerto_matico.Utilidades;
 public class Utilidades {
 
     //Tabla Cultivo
-    public static final String TABLA_Cultivo="Cultivo";
+    /*public static final String TABLA_Cultivo="Cultivo";
     public static final String CAMPO_idC="id_C";
     public static final String CAMPO_HumedadCul="humedad";
     public static final String CAMPO_TemperaturaCul="temperatura";
@@ -14,12 +14,12 @@ public class Utilidades {
             + CAMPO_HumedadCul + "INTEGER NOT NULL,"
             +CAMPO_TemperaturaCul+ "INTEGER NOT NULL,"
             +CAMPO_TiempoLuzCul+ "INTEGER)";
-
+    */
 
     //Tabla Planta
     public static final String TABLA_Planta="Planta";
     public static final String CAMPO_idP="id_P";
-    public static final String CAMPO_idCultivo="id_C";
+    //public static final String CAMPO_idCultivo="id_C";
     public static final String CAMPO_Nombre="nombre";
     public static final String CAMPO_Tipo="tipo";
     public static final String CAMPO_Humedad="humedad";

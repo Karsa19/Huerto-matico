@@ -1,6 +1,9 @@
 package com.example.karen.huerto_matico;
 
-public class CuidadoP {
+import java.io.Serializable;
+
+public class CuidadoP implements Serializable {
+    //private int idPlanta;
     private int diaRiego;
     private int agua;
     private int temp;

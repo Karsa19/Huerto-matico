@@ -15,14 +15,14 @@ public class BDSQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.crear_tabla_cultivo);
+        //db.execSQL(Utilidades.crear_tabla_cultivo);
         db.execSQL(Utilidades.crear_tabla_planta);
         db.execSQL(Utilidades.crear_tabla_cuidado);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS Cultivo");
+        //db.execSQL("DROP TABLE IF EXISTS Cultivo");
         db.execSQL("DROP TABLE IF EXISTS Planta");
         db.execSQL("DROP TABLE IF EXISTS Cuidado");
         onCreate(db);

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Huerto-matico</string>
     <string name="title_activity_cultivo">Cultivo</string>
+    <string name="desc"> Imagenes </string>
+    <string name="datos">Dato</string>
     <string-array name="tipoP">
         <item>cactacea</item>
         <item>ornamento</item>

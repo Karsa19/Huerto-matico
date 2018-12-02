@@ -1,7 +1,10 @@
 package com.example.karen.huerto_matico;
 
-public class Planta {
+import java.io.Serializable;
 
+public class Planta implements Serializable {
+
+    private int id_P;
     private String nombreP;
     private String tipoP;
     private int tiempoLuzP;
@@ -18,7 +21,22 @@ public class Planta {
         this.cuidadoAuto = cuidadoAuto;
     }
 
+    public Planta() {
+
+    }
+
+
+
     /** Set y Get**/
+
+
+    public int getId_P() {
+        return id_P;
+    }
+
+    public void setId_P(int id_P) {
+        this.id_P = id_P;
+    }
 
     public void setTiempoLuz(int tiempoLuz) {
         this.tiempoLuzP = tiempoLuz;

@@ -9,6 +9,8 @@ import com.example.karen.huerto_matico.Utilidades.Utilidades;
 
 public class BDSQLite extends SQLiteOpenHelper {
 
+    public static final String DATABASE_NAME = "BD_Huerto.db";
+
     public BDSQLite(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -23,8 +25,8 @@ public class BDSQLite extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //db.execSQL("DROP TABLE IF EXISTS Cultivo");
-        db.execSQL("DROP TABLE IF EXISTS Planta");
-        db.execSQL("DROP TABLE IF EXISTS Cuidado");
+        db.execSQL("DROP TABLE IF EXISTS planta");
+        db.execSQL("DROP TABLE IF EXISTS cuidado");
         onCreate(db);
     }
 }

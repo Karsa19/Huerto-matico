@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.example.karen.huerto_matico.Utilidades.Utilidades;
 
 public class AgregarPlanta extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Planta nuevaPlanta;
     Button regresarIni;
     EditText nomPlanta;
     Spinner tipoPlanta;
@@ -27,7 +26,7 @@ public class AgregarPlanta extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_planta);
 
-        regresarIni=(Button)findViewById(R.id.regresarAgrega);
+        regresarIni= findViewById(R.id.regresarAgrega);
         regresarIni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,18 +54,19 @@ public class AgregarPlanta extends AppCompatActivity implements AdapterView.OnIt
     }
 
     private void agregarPlanta() {
-        BDSQLite conn= new BDSQLite(this, "BD_Huertomatico", null, 1);
-        SQLiteDatabase BDH= conn.getWritableDatabase();
+        long regresa;
+        BDSQLite conn= new BDSQLite(this, "BD_Huerto", null, 1);
+        SQLiteDatabase BD= conn.getWritableDatabase();
 
         ContentValues values= new ContentValues();
         values.put(Utilidades.CAMPO_Nombre,nomPlanta.getText().toString());
-        values.put(Utilidades.CAMPO_Nombre,tipoPlanta.getSelectedItem().toString());
+        values.put(Utilidades.CAMPO_Tipo,tipoPlanta.getSelectedItem().toString());
 
-        BDH.insert(Utilidades.TABLA_Planta,Utilidades.CAMPO_Nombre,values);
+        regresa=BD.insert(Utilidades.TABLA_Planta,null,values);
 
-        //Toast.makeText(getApplicationContext(),"Planta Agregada: "+ nomResultante ,Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Planta Agregada: "+ regresa ,Toast.LENGTH_SHORT).show();
 
-        BDH.close();
+        BD.close();
 
 
     }

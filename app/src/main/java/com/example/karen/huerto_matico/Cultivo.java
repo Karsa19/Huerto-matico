@@ -52,7 +52,7 @@ public class Cultivo extends AppCompatActivity {
             }
         });
 
-        conn= new BDSQLite(getApplicationContext(),"BD_Huertomatico",null,1);
+        conn= new BDSQLite(getApplicationContext(),"BD_Huerto",null,1);
         cultivo=(ListView) findViewById(R.id.ListaCultivo);
         consultarCultivo();
 
@@ -63,11 +63,11 @@ public class Cultivo extends AppCompatActivity {
 
     private void consultarCultivo() {
 
-        SQLiteDatabase BDH=conn.getReadableDatabase();
+        SQLiteDatabase BD_Huertomatico=conn.getReadableDatabase();
          Planta planta= null;
          plantas= new ArrayList<Planta>();
 
-        Cursor cursor=BDH.rawQuery("SELECT * FROM "+ Utilidades.TABLA_Planta,null);
+        Cursor cursor=BD_Huertomatico.rawQuery("SELECT * FROM "+ Utilidades.TABLA_Planta,null);
 
         while (cursor.moveToNext()){
             planta= new Planta();
